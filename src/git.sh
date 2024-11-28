@@ -18,13 +18,11 @@ git switch <name>
 
 # 合并分支
 git merge
-# 查看提交历史记录
-git log
 # 推送到远程仓库
 git push
 
 
-
+########################### 分支操作 ###########################
 # 创建新的分支并切换到该分支上（相当于两条命令）
 # git checkout -b <name>   ===  git branch <name> && git checkout <name>
 git switch -c <name>
@@ -33,6 +31,9 @@ git switch -c <name>
 
 
 
-
+# 查看文件状态
+git status
+# 查看提交历史记录
+git log
 
 
