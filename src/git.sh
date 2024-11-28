@@ -57,7 +57,6 @@ git status
 git log
 
 # 查看当前所在的分支（列出本地的所有分支）
-git branch --local
 git branch
 # 列出远程的所有分支
 git branch --remote
