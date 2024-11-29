@@ -89,3 +89,10 @@ git checkout -b <branch-name> <tag-name>
 
 # 切换到某个提交版本
 git checkout <commit-ID>
+
+# 对git对象进行压缩
+git gc
+# 删除垃圾对象
+git prune
+# 查看垃圾对象
+git fsck
