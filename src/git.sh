@@ -14,14 +14,15 @@ git add .
 git commit -m "<message>"
 
 # 创建分支
-git branch <name>
+git branch <branch-name>
 # 切换到某分支
-# git checkout <name>
-git switch <name>
-# 删除某分支
-git branch -d <name>
+# git checkout <branch-name>
+git switch <branch-name>
+# 删除某分支。如果该分支没有完全合并的话，就会报错
+# git branch --delete <branch-name>
+git branch -d <branch-name>
 # 强制删除某分支
-git branch -D <name>
+git branch -D <branch-name>
 
 # 合并分支（将指定分支合并到当前分支）
 git merge <branch-name>
