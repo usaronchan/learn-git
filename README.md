@@ -1,3 +1,3 @@
 # learn-git
 
-这是一个 Git 的学习仓库，用于训练 Git 的各种操作使用。
+This is a repository created for learning git, please don't pull requests and star.

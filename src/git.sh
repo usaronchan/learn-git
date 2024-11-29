@@ -43,8 +43,11 @@ git switch -c <name>
 
 # 取消暂存（也就是git commit的回退）
 git reset <filename>
-# 切换到指定提交版本
+# 切换到指定提交版本（回退到指定提交版本）
+# hard会直接删除代码
+# soft不会直接删除，会保留一份，自己可以手动修改
 git reset --hard <commit ID>
+git reset --soft <commit ID>
 
 
 ########################### 检查操作 ###########################
@@ -54,6 +57,7 @@ git status
 git log
 
 # 查看当前所在的分支（列出本地的所有分支）
+git branch --local
 git branch
 # 列出远程的所有分支
 git branch --remote
@@ -74,5 +78,6 @@ git tag
 git tag <tag-name>
 # 将标签推送到远程仓库
 git push origin <tag-name>
-
+# 切换到某标签（要写切换到哪个分支）
+git checkout -b <branch-name> <tag-name>
 
