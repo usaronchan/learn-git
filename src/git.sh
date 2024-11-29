@@ -23,6 +23,8 @@ git switch <branch-name>
 git branch -d <branch-name>
 # 强制删除某分支
 git branch -D <branch-name>
+# 删除远程分支
+git branch -d --remote <origin-brnach-name>
 
 # 合并分支（将指定分支合并到当前分支）
 git merge <branch-name>
@@ -81,4 +83,7 @@ git tag <tag-name>
 git push origin <tag-name>
 # 切换到某标签（要写切换到哪个分支）
 git checkout -b <branch-name> <tag-name>
+
+
+
 
