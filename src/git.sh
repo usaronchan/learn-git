@@ -32,6 +32,9 @@ git merge <branch-name>
 git push
 # 推送指定分支到远程仓库（后面填写的分支与当前所在分支无关）
 git push origin <branch-name>
+# 推送指定分支到远程仓库（需要填上传信息）
+# git push --set-upstream origin <branch-name>
+git push -u origin <branch-name>
 
 # 抓取（但没合并）
 git fetch
