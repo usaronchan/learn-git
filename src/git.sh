@@ -44,6 +44,21 @@ git pull -v
 git cherry-pick <commit-ID>
 
 
+
+git log
+
+git log --oneline
+
+
+# 仅仅是还原单个文件，而不删除之后的commit
+# 这种方式基本上会完整保留先前的历史纪录，是一种安全性较高的做法
+git checkout -- <file>
+
+# 如果是将全部文件回退到之前的某个版本，先前的历史纪录舍弃
+# 这种操作是不可逆的，注意备份
+git reset --hard <commit-ID>
+
+
 ########################### 常用命令 ###########################
 # 当分支不相关时使用这个命令
 git pull origin <branch-name> --allow-unrelated-histories
