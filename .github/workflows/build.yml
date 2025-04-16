@@ -1,0 +1,37 @@
+name: build
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+      - name: Create and merge PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # Personal Access Token
+        run: |
+          current_date=$(date +%Y-%m-%d)
+          branch_name="weekly/${current_date}"
+
+          git fetch origin ${branch_name}
+
+          # Check if the branch exists
+          if [[ -n "$(git ls-remote origin $branch_name)" ]]; then
+            git checkout ${branch_name}
+            # Create a pull request using GitHub CLI
+            gh pr create --base main --head $branch_name --title "weekly post PR" --body "This is a PR for weekly post changes."
+
+            # Wait for a few seconds to allow GitHub to process the PR creation
+            sleep 15
+            # Merge the pull request using GitHub CLI
+            gh pr merge --squash
+          else
+            echo "Weekly branch '${branch_name}' does not exist."
+          fi
