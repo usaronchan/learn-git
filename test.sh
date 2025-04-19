@@ -1,9 +1,10 @@
-git pull rebase
+git pull --rebase
+
+git fetch
+git rebase origin/main
 
 
-
-
-git pull
+git pull --ff
 
 
 
