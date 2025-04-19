@@ -4,6 +4,5 @@
 
 - 学会 clone, pull, add, commit, push, merge, rebase, branch, checkout, log 就可以了。其他的现用现查。
 
-- 不要使用 `git commit -m`，而是用 `git commit -v` 或 `git commit`
-
+- 提交 commit 的时候不要使用 `git commit -m`，而是用 `git commit` 或 `git commit -v`
 - git 提倡频繁 commit，log 会比较清晰，否则 log 就没有任何意义了，需要回退操作也会变得很麻烦。
