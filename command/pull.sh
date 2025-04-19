@@ -11,4 +11,9 @@ git pull --ff-only
 git fetch
 git merge --ff-only origin/main
 
+git pull --ff
+# 相当于
+git fetch
+# Fast-forward
+git merge --ff origin/main
 
