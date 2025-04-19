@@ -12,3 +12,7 @@ git fetch
 git merge origin main
 
 
+
+
+# Fast-forward
+git merge --ff-only origin main
