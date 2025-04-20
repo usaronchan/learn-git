@@ -5,8 +5,10 @@ git fetch
 # 拉取（相当于两条命令）   ===  git fetch && git merge origin/<branch-name>
 git pull
 ########################### 分支操作 ###########################
-# 取消暂存（也就是git commit的回退）
+# 取消暂存（也就是git add的回退）
 git reset <filename>
+
+
 # 切换到指定提交版本（回退到指定提交版本）
 # hard会直接删除代码
 # soft不会直接删除，会保留一份，自己可以手动修改
