@@ -52,24 +52,25 @@ git remote add <remote-name> <url>
 ######## 分割线 ########
 
 # 修改上一次提交的提交信息
+# Change the last commit log
 git commit --amend
-git commit --amend -m "<message>"
+# git commit --amend -m "<message>"
 
 # 直接将工作区的内容直接提交到本地仓库（不需要add）
 git commit -a
 ########################### 示例操作 ###########################
-# 平时使用chanzz分支进行更新备份。最多合并下dev中的代码
+# 平时使用user分支进行更新备份。最多合并下dev中的代码
 git branch -vv
-git switch chanzz
+git switch user
 git add .
 git commit -m "update"
 
 git merge dev
 
-# 开发阶段新增一个功能，从chanzz进行拉取
+# 开发阶段新增一个功能，从user进行拉取
 git branch -vv
 git switch dev
-git merge chanzz
+git merge user
 
 # 主分支（生产分支），等发布一个版本时使用（专门从dev拉取）
 git branch -vv
