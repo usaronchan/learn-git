@@ -10,3 +10,5 @@ git rebase dev
 
 
 
+# 如果是提交历史不相关的分支
+git merge <branch-name> --allow-unrelated-histories
