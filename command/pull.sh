@@ -1,5 +1,8 @@
 ###### Pull ######
 git pull
+# 相当于
+git fetch
+git merge
 
 git pull --rebase
 # 相当于
